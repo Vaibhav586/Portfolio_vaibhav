@@ -4,49 +4,40 @@ import { useState, useRef, useEffect } from "react";
 
 const certifications = [
   {
-    title: "Process Data from Dirty to Clean",
-    issuer: "Google - Coursera",
-    date: "2023",
-    credential: "GC2345678",
-    color: "#4285F4", // Google Blue
-    description: "Comprehensive training in data processing techniques, data cleaning methodologies, and preparing datasets for effective analysis.",
-    skills: ["Data Cleaning", "Data Processing", "Data Analysis"]
-  },
-  {
-    title: "Oracle Cloud Infrastructure Associate",
+    title: "Oracle Database SQL Specialist",
     issuer: "Oracle",
     date: "2023",
-    credential: "1Z0-1085-24",
-    color: "#f80000", // Oracle Red
-    description: "Verification of understanding Oracle Cloud Infrastructure services and implementation capabilities.",
-    skills: ["Cloud Computing", "OCI Services", "Cloud Security"]
+    credential: "OC2345678",
+    color: "#f5424e", // Red
+    description: "Validation of SQL knowledge and skills required to create and manage Oracle databases effectively.",
+    skills: ["SQL", "Database Design", "Query Optimization"]
   },
   {
-    title: "Introduction to Responsible AI",
-    issuer: "Google Cloud - Coursera",
+    title: "Oracle Cloud Infrastructure AI Foundations Associate",
+    issuer: "Oracle",
     date: "2023",
-    credential: "GC987654",
-    color: "#34A853", // Google Green
-    description: "Recognition of expertise in ethical AI principles, fairness in machine learning, and responsible AI development practices.",
-    skills: ["AI Ethics", "Fairness", "Responsible ML"]
+    credential: "OC1234567",
+    color: "#4fd1c5", // Teal
+    description: "Verification of understanding Oracle Cloud AI services and implementation capabilities.",
+    skills: ["Cloud Computing", "AI Services", "OCI"]
   },
   {
-    title: "Introduction to Cybersecurity",
-    issuer: "Cisco",
+    title: "AWS Academy Machine Learning Foundations",
+    issuer: "Amazon Web Services",
     date: "2023",
-    credential: "CS654321",
-    color: "#1BA0D7", // Cisco Blue
-    description: "Foundational knowledge in cybersecurity principles, threat detection, and implementing basic security protocols.",
-    skills: ["Network Security", "Threat Detection", "Security Fundamentals"]
+    credential: "AWS987654",
+    color: "#fc9d03", // Orange
+    description: "Recognition of expertise in AWS machine learning services and basics of ML model development.",
+    skills: ["Machine Learning", "AWS Services", "Data Analysis"]
   },
   {
-    title: "Zero Trust Cloud Security",
-    issuer: "AICTE",
+    title: "Full Stack Web Development Bootcamp",
+    issuer: "Udemy",
     date: "2023",
-    credential: "AT123456",
-    color: "#9F7AEA", // Purple
-    description: "Advanced training in zero trust security architecture implementation for cloud environments.",
-    skills: ["Zero Trust", "Cloud Security", "Security Architecture"]
+    credential: "UC654321",
+    color: "#9f7aea", // Purple
+    description: "Comprehensive training in full-stack web development including frontend, backend, and database technologies.",
+    skills: ["JavaScript", "React", "Node.js", "MongoDB"]
   }
 ];
 
@@ -120,13 +111,14 @@ export const Certifications = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gradient text-center">
             Certifications
           </h2>
           <p className="text-center mt-4 text-gray-300 max-w-2xl">
             Professional certifications and qualifications that validate my technical skills and knowledge.
           </p>
           
+          {/* Search bar */}
           <div className="relative mt-6 w-full max-w-md">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -172,7 +164,7 @@ export const Certifications = () => {
                 onMouseLeave={() => setActiveIndex(null)}
               >
                 <motion.div 
-                  className="p-6 h-full relative overflow-hidden cursor-pointer border border-gray-700 rounded-lg bg-gray-800 bg-opacity-50"
+                  className="glass-card p-6 h-full relative overflow-hidden cursor-pointer"
                   whileHover={{ 
                     scale: 1.03,
                     transition: { duration: 0.3 }
@@ -183,6 +175,7 @@ export const Certifications = () => {
                   role="button"
                   aria-label={`View details of ${cert.title} certification`}
                 >
+                  {/* Animated background glow */}
                   <motion.div 
                     className="absolute inset-0 opacity-0 blur-xl"
                     animate={{ 
@@ -194,9 +187,10 @@ export const Certifications = () => {
                   
                   <div className="flex items-start gap-4 relative z-10">
                     <motion.div 
-                      className="p-3 rounded-lg bg-gray-700"
+                      className="p-3 glass rounded-lg flex-shrink-0"
                       animate={{ 
-                        backgroundColor: activeIndex === index ? 'rgba(255, 255, 255, 0.2)' : 'rgba(255, 255, 255, 0.1)'
+                        backgroundColor: activeIndex === index ? 'rgba(255, 255, 255, 0.2)' : 'rgba(255, 255, 255, 0.1)',
+                        boxShadow: activeIndex === index ? `0 0 15px rgba(255, 255, 255, 0.3)` : '0 0 0 rgba(0, 0, 0, 0)'
                       }}
                       transition={{ duration: 0.3 }}
                     >
@@ -247,7 +241,7 @@ export const Certifications = () => {
                         transition={{ duration: 0.3 }}
                       >
                         <motion.button 
-                          className="flex items-center gap-1 px-4 py-2 rounded-full bg-gray-700"
+                          className="flex items-center gap-1 px-4 py-2 rounded-full glass"
                           whileHover={{ 
                             backgroundColor: 'rgba(255, 255, 255, 0.3)', 
                             scale: 1.05
@@ -255,6 +249,7 @@ export const Certifications = () => {
                           transition={{ duration: 0.2 }}
                           onClick={(e) => {
                             e.stopPropagation();
+                            // Verification logic would go here
                             window.open("#", "_blank");
                           }}
                           aria-label={`Verify ${cert.title} certification`}
@@ -282,6 +277,7 @@ export const Certifications = () => {
           )}
         </motion.div>
 
+        {/* Modal */}
         {modalOpen && selectedCert && (
           <motion.div 
             className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
@@ -291,7 +287,7 @@ export const Certifications = () => {
           >
             <motion.div 
               ref={modalRef}
-              className="bg-gray-900 rounded-2xl overflow-hidden max-w-2xl w-full relative border border-gray-700"
+              className="bg-gray-900 rounded-2xl overflow-hidden max-w-2xl w-full relative glass-card"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
@@ -308,7 +304,7 @@ export const Certifications = () => {
               
               <div className="p-6 md:p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-lg bg-gray-800" style={{ borderLeft: `3px solid ${selectedCert.color}` }}>
+                  <div className="p-3 rounded-lg" style={{ backgroundColor: `${selectedCert.color}25` }}>
                     <Award className="w-8 h-8" style={{ color: selectedCert.color }} />
                   </div>
                   <div>
@@ -341,10 +337,11 @@ export const Certifications = () => {
                     {selectedCert.skills.map((skill, i) => (
                       <span 
                         key={i} 
-                        className="text-sm py-1 px-3 rounded-full bg-gray-800" 
+                        className="text-sm py-1 px-3 rounded-full" 
                         style={{ 
+                          backgroundColor: `${selectedCert.color}15`,
                           color: selectedCert.color,
-                          borderLeft: `3px solid ${selectedCert.color}`
+                          border: `1px solid ${selectedCert.color}50`
                         }}
                       >
                         {skill}
@@ -355,12 +352,13 @@ export const Certifications = () => {
                 
                 <div className="flex flex-wrap gap-3 mt-8">
                   <motion.button 
-                    className="flex items-center gap-2 px-5 py-2 rounded-lg"
+                    className="flex items-center gap-2 px-5 py-2 rounded-lg glass"
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.97 }}
                     style={{ backgroundColor: selectedCert.color }}
                     onClick={(e) => {
                       e.stopPropagation();
+                      // Verification logic would go here
                       window.open("#", "_blank");
                     }}
                   >
