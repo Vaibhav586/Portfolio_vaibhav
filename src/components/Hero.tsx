@@ -17,7 +17,7 @@ export const Hero = () => {
         >
           <div className="mb-8">
             <img
-              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80"
+              src="./Vaibhav.jpeg"
               alt="Vaibhav"
               className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-500 hover:scale-105 transition-transform duration-300"
             />
