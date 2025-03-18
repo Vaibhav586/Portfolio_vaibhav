@@ -128,7 +128,7 @@ export const Contributions = () => {
                   <h3 className="text-2xl font-semibold">GitHub Contributions</h3>
                 </div>
                 <a 
-                  href="https://github.com/Aayush-25" 
+                  href="https://github.com/Vaibhav586" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm flex items-center gap-1 text-gray-300 hover:text-white transition-colors"
@@ -140,7 +140,7 @@ export const Contributions = () => {
 
               <div className="my-8 overflow-x-auto">
                 <GitHubCalendar
-                  username="Aayush-25"
+                  username="Vaibhav586"
                   colorScheme="dark"
                   blockSize={12}
                   blockMargin={5}
@@ -244,7 +244,7 @@ export const Contributions = () => {
                   <h3 className="text-2xl font-semibold">LeetCode Progress</h3>
                 </div>
                 <a 
-                  href="https://leetcode.com/" 
+                  href="https://leetcode.com/Vaibhav_586" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm flex items-center gap-1 text-gray-300 hover:text-white transition-colors"
