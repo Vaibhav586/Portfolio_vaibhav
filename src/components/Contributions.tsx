@@ -91,7 +91,7 @@ export const Contributions = () => {
         <div className="flex justify-center mb-8">
           <div className="glass inline-flex rounded-full p-1">
             <motion.button
-              className={rounded-full px-4 py-2 text-sm font-medium flex items-center gap-2 transition-colors ${activeTab === "github" ? "bg-primary text-white" : "hover:bg-gray-800"}}
+              className={`rounded-full px-4 py-2 text-sm font-medium flex items-center gap-2 transition-colors ${activeTab === "github" ? "bg-primary text-white" : "hover:bg-gray-800"}`}
               onClick={() => setActiveTab("github")}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
