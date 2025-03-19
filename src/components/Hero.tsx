@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Download, Mail } from 'lucide-react';
+import profileImage from "./Vaibhav.jpeg";
 import { Clock } from './Clock';
 
 export const Hero = () => {
@@ -17,7 +18,7 @@ export const Hero = () => {
         >
           <div className="mb-8">
             <img
-              src="./src/components/Vaibhav.jpeg"
+              src={profileImage}
               alt="Vaibhav"
               className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-500 hover:scale-105 transition-transform duration-300"
             />
