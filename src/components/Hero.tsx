@@ -17,7 +17,7 @@ export const Hero = () => {
         >
           <div className="mb-8">
             <img
-              src="./Vaibhav.jpeg"
+              src="./src/components/Vaibhav.jpeg"
               alt="Vaibhav"
               className="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-500 hover:scale-105 transition-transform duration-300"
             />
