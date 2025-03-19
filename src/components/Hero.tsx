@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Download, Mail } from 'lucide-react';
-import profileImage from "./Vaibhav.jpeg";
+import profileImage from "./User1.jpeg";
 import { Clock } from './Clock';
 
 export const Hero = () => {
