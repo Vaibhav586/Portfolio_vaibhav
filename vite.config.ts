@@ -6,11 +6,12 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
-    include: ['axios'], // Add axios to the include list
+    // Remove axios from here if you want it to be external
   },
   build: {
     rollupOptions: {
-      external: ['axios'], // Explicitly externalize axios
+      // Either remove this entire section if you want axios bundled
+      // Or keep it if you truly want axios as an external dependency
     },
   },
 });
