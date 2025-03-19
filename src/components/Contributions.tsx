@@ -2,34 +2,39 @@ import { motion } from "framer-motion";
 import GitHubCalendar from "react-github-calendar";
 import { Tooltip } from "react-tooltip";
 import { Github, Code, Award, TrendingUp, Trophy, Target, Timer, CheckCircle2, LineChart } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-// Sample LeetCode problem data
-const leetcodeStats = {
-  problemsSolved: 250,
-  contestRating: 1650,
-  globalRank: "Top 10%",
-  recentProblems: [
-    { name: "Longest Common Subsequence", difficulty: "Medium", solved: "2 days ago" },
-    { name: "Binary Tree Maximum Path Sum", difficulty: "Hard", solved: "1 week ago" },
-    { name: "Merge Intervals", difficulty: "Medium", solved: "2 weeks ago" },
-    { name: "Two Sum", difficulty: "Easy", solved: "3 weeks ago" }
-  ],
-  monthlySolvedCount: [12, 15, 23, 18, 25, 30, 22, 28, 32, 35, 30, 28]
-};
-
-// Sample contribution stats
-const contributionStats = {
-  repositoriesContributed: 15,
-  issuesClosed: 28,
-  pullRequestsMerged: 42,
-  codeReviews: 35,
-  totalCommits: 750
-};
-
-export const Contributions = () => {
+const Contributions = () => {
   const [activeTab, setActiveTab] = useState("github");
-  
+  const [contributionStats, setContributionStats] = useState(null);
+
+  // Fetch GitHub data
+  useEffect(() => {
+    const fetchGitHubData = async () => {
+      try {
+        const response = await axios.get("https://api.github.com/users/Vaibhav586/repos");
+        const repos = response.data;
+        const totalCommits = repos.reduce((acc, repo) => acc + repo.commits_count, 0); // Example calculation
+        setContributionStats({
+          repositoriesContributed: repos.length,
+          issuesClosed: 0, // Placeholder, add real data fetching logic
+          pullRequestsMerged: 0, // Placeholder, add real data fetching logic
+          codeReviews: 0, // Placeholder, add real data fetching logic
+          totalCommits: totalCommits,
+        });
+      } catch (error) {
+        console.error("Error fetching GitHub data:", error);
+      }
+    };
+
+    fetchGitHubData();
+  }, []); // Empty dependency array to run only once on component mount
+
+  if (!contributionStats) {
+    return <div>Loading...</div>;
+  }
+
   // Animation variants
   const container = {
     hidden: { opacity: 0 },
@@ -342,7 +347,7 @@ export const Contributions = () => {
                             animate={{ height: `${(count/35) * 100}%` }}
                             transition={{ duration: 1, delay: i * 0.05 }}
                           />
-                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">
                             {count} problems
                           </div>
                         </div>
@@ -363,3 +368,5 @@ export const Contributions = () => {
     </section>
   );
 };
+
+export default Contributions;
