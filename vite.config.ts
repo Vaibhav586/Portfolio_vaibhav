@@ -8,4 +8,9 @@ export default defineConfig({
     exclude: ['lucide-react'],
     include: ['axios'], // Add axios to the include list
   },
+  build: {
+    rollupOptions: {
+      external: ['axios'], // Explicitly externalize axios
+    },
+  },
 });
