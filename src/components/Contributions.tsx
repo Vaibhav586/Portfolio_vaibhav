@@ -4,43 +4,28 @@ import { Tooltip } from "react-tooltip";
 import { Github, Code, Award, TrendingUp, Trophy, Target, Timer, CheckCircle2, LineChart } from "lucide-react";
 import { useState, useEffect } from "react";
 // Remove direct axios import and use mockData instead since axios is causing build issues
+// Sample LeetCode problem data
+const leetcodeStats = {
+  problemsSolved: 250,
+  contestRating: 1650,
+  globalRank: "Top 10%",
+  recentProblems: [
+    { name: "Longest Common Subsequence", difficulty: "Medium", solved: "2 days ago" },
+    { name: "Binary Tree Maximum Path Sum", difficulty: "Hard", solved: "1 week ago" },
+    { name: "Merge Intervals", difficulty: "Medium", solved: "2 weeks ago" },
+    { name: "Two Sum", difficulty: "Easy", solved: "3 weeks ago" }
+  ],
+  monthlySolvedCount: [12, 15, 23, 18, 25, 30, 22, 28, 32, 35, 30, 28]
+};
 
-const Contributions = () => {
-  const [activeTab, setActiveTab] = useState("github");
-  const [contributionStats, setContributionStats] = useState({
-    repositoriesContributed: 15,
-    issuesClosed: 25,
-    pullRequestsMerged: 42,
-    codeReviews: 37,
-    totalCommits: 528
-  });
-
-  // Mock LeetCode stats since they were undefined in the original code
-  const leetcodeStats = {
-    problemsSolved: 250,
-    contestRating: 1842,
-    globalRank: "8,234",
-    recentProblems: [
-      { name: "Valid Parentheses", difficulty: "Easy", solved: "2 days ago" },
-      { name: "Merge Two Sorted Lists", difficulty: "Easy", solved: "3 days ago" },
-      { name: "LRU Cache", difficulty: "Medium", solved: "5 days ago" },
-      { name: "Find Median from Data Stream", difficulty: "Hard", solved: "1 week ago" },
-      { name: "Course Schedule", difficulty: "Medium", solved: "1 week ago" }
-    ],
-    monthlySolvedCount: [10, 15, 20, 18, 22, 25, 30, 32, 28, 25, 20, 18]
-  };
-
-  // Replace axios with mock data loading
-  useEffect(() => {
-    // Simulate data loading with a timeout instead of axios
-    const timer = setTimeout(() => {
-      setContributionStats({
-        repositoriesContributed: 15,
-        issuesClosed: 25,
-        pullRequestsMerged: 42,
-        codeReviews: 37,
-        totalCommits: 528
-      });
+// Sample contribution stats
+const contributionStats = {
+  repositoriesContributed: 15,
+  issuesClosed: 28,
+  pullRequestsMerged: 42,
+  codeReviews: 35,
+  totalCommits: 750
+};
     }, 500);
     
     return () => clearTimeout(timer);
