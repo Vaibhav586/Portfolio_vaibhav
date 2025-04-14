@@ -28,7 +28,6 @@ const contributionStats = {
 };
     
     return () => clearTimeout(timer);
-  }, []);
 
   // Animation variants
   const container = {
