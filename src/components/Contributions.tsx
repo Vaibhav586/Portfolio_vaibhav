@@ -26,7 +26,6 @@ const contributionStats = {
   codeReviews: 35,
   totalCommits: 750
 };
-    , 500);
     
     return () => clearTimeout(timer);
   }, []);
