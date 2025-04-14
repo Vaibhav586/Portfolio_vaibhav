@@ -5,17 +5,14 @@ import { Github, Code, Award, TrendingUp, Trophy, Target, Timer, CheckCircle2, L
 import { useState, useEffect } from "react";
 // Remove direct axios import and use mockData instead since axios is causing build issues
 // Sample LeetCode problem data
-const leetcodeStats = {
-  problemsSolved: 250,
-  contestRating: 1650,
-  globalRank: "Top 10%",
-  recentProblems: [
-    { name: "Longest Common Subsequence", difficulty: "Medium", solved: "2 days ago" },
-    { name: "Binary Tree Maximum Path Sum", difficulty: "Hard", solved: "1 week ago" },
-    { name: "Merge Intervals", difficulty: "Medium", solved: "2 weeks ago" },
-    { name: "Two Sum", difficulty: "Easy", solved: "3 weeks ago" }
-  ],
-  monthlySolvedCount: [12, 15, 23, 18, 25, 30, 22, 28, 32, 35, 30, 28]
+const Contributions = () => {
+  const leetcodeStats = {
+    problemsSolved: 250,
+    contestRating: 1650,
+    globalRank: "Top 10%"
+  };
+
+  return; // This is valid inside a function or component
 };
 
 // Sample contribution stats
