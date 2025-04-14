@@ -361,6 +361,5 @@ const contributionStats = {
       </div>
     </section>
   );
-};
 
 export default Contributions;
