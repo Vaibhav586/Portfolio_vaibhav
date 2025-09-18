@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vaibhav — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f12; /* deep */
+      --card:#0f1518;
+      --muted:#9aa9b2;
+      --accent:#48cae4;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef3;background:linear-gradient(180deg,var(--bg),#071014);}
+    a{color:var(--accent);text-decoration:none}
+
+    /* Layout */
+    .wrap{max-width:1100px;margin:0 auto;padding:36px 20px}
+    header.top{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:16px}
+    .avatar{width:100px;height:120px;border-radius:12px;object-fit:cover;border:2px solid rgba(72,202,228,0.12);}
+    .name{font-weight:800;font-size:1.1rem}
+    .nav{display:flex;gap:12px;align-items:center}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent);color:#041014;padding:10px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:center;padding:48px 0}
+    .hero-left h1{font-size:2.4rem;margin:0 0 8px}
+    .typed{color:var(--accent);font-weight:700}
+    .lead{color:var(--muted);line-height:1.6;margin-top:12px}
+    .hero-visual{background:linear-gradient(180deg,rgba(72,202,228,0.03),transparent);border-radius:16px;padding:22px;display:flex;align-items:center;justify-content:center}
+    .hero-card{width:320px;background:linear-gradient(180deg,var(--card),#071214);border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+    .hero-card h3{margin:0 0 8px}
+    .meta{display:flex;gap:8px;color:var(--muted);font-size:0.9rem}
+
+    /* sections */
+    section{margin-top:40px}
+    .section-title{display:flex;align-items:center;gap:12px}
+    .section-title h2{margin:0;color:var(--accent)}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass-2));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 6px 20px rgba(2,6,8,0.6);transition:transform .28s,box-shadow .28s}
+    .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(2,6,8,0.7)}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .small{font-size:0.85rem;color:var(--muted)}
+
+    /* projects */
+    .project-links{display:flex;gap:10px;margin-top:12px}
+    .pill{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:600;color:var(--muted)}
+
+    /* skills bars */
+    .skill{margin:8px 0}
+    .skill-name{display:flex;justify-content:space-between;font-weight:600}
+    .bar{height:12px;background:rgba(255,255,255,0.04);border-radius:8px;margin-top:8px;overflow:hidden}
+    .fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#0be7c8);border-radius:8px;transition:width 1.6s}
+
+    /* timeline */
+    .timeline{position:relative;padding-left:24px}
+    .timeline:before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),transparent)}
+    .titem{position:relative;padding:12px 0 12px 20px}
+    .titem:before{content:'';position:absolute;left:-6px;top:14px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(72,202,228,0.08)}
+
+    /* contact form */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:var(--muted)}
+
+    footer{margin-top:50px;padding:30px 0;text-align:center;color:var(--muted)}
+
+    /* subtle fade */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* responsive */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.hero-visual{order:2}.wrap{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <img src="Vaibhav.png" alt="Vaibhav" class="avatar">
+        <div>
+          <div class="name">Vaibhav Vikash</div>
+          <div class="small muted">B.Tech CSE (AI & ML) • SRMIST</div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a class="small ghost" href="VAIBHAV_RESUME.pdf" download>Resume</a>
+        <a class="small ghost" href="https://github.com/Vaibhav586" target="_blank">GitHub</a>
+        <a class="small ghost" href="https://leetcode.com/Vaibhav_586" target="_blank">LeetCode</a>
+        <a class="small ghost" href="https://linkedin.com/in/vaibhav-rajiv-kumar-53177a333" target="_blank">LinkedIn</a>
+        <div class="cta">
+          <button class="btn" onclick="scrollTo('#contact')">Contact</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left reveal">
+        <h1>Hi — I'm <span style="color:var(--accent)">Vaibhav</span></h1>
+        <div class="typed" id="typed">AI & ML · Web Dev · Open Source</div>
+        <p class="lead">I build scalable backend systems, deploy performant ML models, and ship delightful web apps. Currently focusing on generative AI tooling and full-stack integrations.</p>
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="VAIBHAV_RESUME.pdf" download class="btn">Download Resume</a>
+          <a class="ghost" href="mailto:vikashvaibhav584@gmail.com">vikashvaibhav584@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-card">
+          <h3 style="margin-bottom:6px">Profile</h3>
+          <div class="meta">SRM Institute of Science & Technology • B.Tech CSE (AI & ML)</div>
+          <p class="small muted" style="margin-top:12px">Select highlights</p>
+          <ul style="margin-top:8px;color:var(--muted);line-height:1.5">
+            <li>OpenRAG — Beta tester for DocDynamo</li>
+            <li>Zero Trust Cloud Security internship (Zscaler)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / TIMELINE -->
+    <section>
+      <div class="section-title">
+        <h2>Journey</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="titem">
+          <div style="font-weight:700"> Zero Trust Cloud Security Internship - 2024 </div>
+          <div class="small muted">Completed a 10-week program focused on Zero Trust Cloud Security and governance models</div>
+          <div class="small muted">Worked on cloud protection strategies and gained hands-on exposure to securing infrastructure</div>
+        </div>
+        <div class="titem">
+          <div style="font-weight:700">OpenRAG (DocDynamo) - 2025 </div>
+          <div class="small muted">Beta tester & NLP validation for document automation platform</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+      <div class="grid reveal">
+        <div class="card">
+          <h3>Generative AI Notes Summarizer</h3>
+          <p class="muted small">OpenAI + LangChain • Flask + MongoDB • Auth & real-time processing</p>
+          <div class="project-links">
+            <a class="pill" href="#">Live demo</a>
+            <a class="pill" href="https://github.com/Vaibhav586/Generative-AI-Notes-Summarizer" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Spring Boot To-Do API</h3>
+          <p class="muted small">Spring Boot • Hibernate (JPA) • MySQL • Docker</p>
+          <div class="project-links">
+            <a class="pill" href="#">API Docs</a>
+            <a class="pill" href="https://github.com/Vaibhav586/Spring-Boot-To-Do-API" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>AI-Powered Assistive Vision System</h3>
+          <p class="muted small">YOLOv5 • TensorFlow • Raspberry Pi optimizations for low-latency</p>
+          <div class="project-links">
+            <a class="pill" href="#">Details</a>
+            <a class="pill" href="https://github.com/Vaibhav586/AI-Powered-Assistive-Vision-System" target="_blank">Source</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-title"><h2>Skills</h2></div>
+      <div class="grid reveal">
+        <div class="card">
+          <div class="skill">
+            <div class="skill-name"><span>Python</span><span>90%</span></div>
+            <div class="bar"><div class="fill" data-w="90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name"><span>Machine Learning</span><span>85%</span></div>
+            <div class="bar"><div class="fill" data-w="85%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name"><span>React.js</span><span>80%</span></div>
+            <div class="bar"><div class="fill" data-w="80%"></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="skill">
+            <div class="skill-name"><span>JavaScript</span><span>80%</span></div>
+            <div class="bar"><div class="fill" data-w="80%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name"><span>Java & Spring Boot</span><span>75%</span></div>
+            <div class="bar"><div class="fill" data-w="75%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-name"><span>DevOps: Docker, Git</span><span>70%</span></div>
+            <div class="bar"><div class="fill" data-w="70%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <div class="section-title"><h2>Achievements & Certifications</h2></div>
+      <div class="grid reveal">
+        <div class="card"><strong>Oracle Cloud Infrastructure Associate (1Z0-1085-24)</strong><div class="small muted">Cloud fundamentals</div></div>
+        <div class="card"><strong>Responsible AI — Google Cloud (Coursera)</strong><div class="small muted">Ethical AI principles</div></div>
+        <div class="card"><strong>Zero Trust Cloud Security — AICTE</strong><div class="small muted">Security framework</div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <div class="grid reveal">
+        <div class="card">
+          <form id="contactForm">
+            <input name="name" placeholder="Your name" required />
+            <input name="email" type="email" placeholder="Your email" required />
+            <input name="subject" placeholder="Subject (optional)" />
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button type="submit" class="btn">Send Message</button>
+              <a class="ghost" href="mailto:vikashvaibhav584@gmail.com">Or email directly</a>
+            </div>
+            <div id="formMsg" class="small muted" style="margin-top:8px"></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Quick Contact</h3>
+          <div class="small muted">Email</div>
+          <a href="mailto:vikashvaibhav584@gmail.com">vikashvaibhav584@gmail.com</a>
+          <div style="height:12px"></div>
+          <div class="small muted">GitHub</div>
+          <a href="https://github.com/Vaibhav586" target="_blank">github.com/Vaibhav586</a>
+          <div style="height:12px"></div>
+          <div class="small muted">LeetCode</div>
+          <a href="https://leetcode.com/Vaibhav_586" target="_blank">leetcode.com/Vaibhav_586</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>&copy; 2025 Vaibhav </footer>
+  </div>
+
+  <script>
+    // Simple typed-like rotation for hero
+    (function(){
+      const el = document.getElementById('typed');
+      const texts = ['AI & ML · Web Dev · Open Source','Generative AI • Model Deployments','Backend Systems • APIs • Scalable Design'];
+      let i=0, j=0, dir=1, building=true;
+      function step(){
+        const t = texts[i];
+        el.textContent = t.slice(0,j);
+        if(building){ j++; if(j>t.length){ building=false; setTimeout(step,900); return;} }
+        else{ j--; if(j===0){ building=true; i=(i+1)%texts.length; } }
+        setTimeout(step, building?80:35);
+      }
+      step();
+    })();
+
+    // Reveal on scroll
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(n=>obs.observe(n));
+
+    // Animate skill bars when visible
+    const skillObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.querySelectorAll('.fill').forEach(f=>{ f.style.width = f.getAttribute('data-w'); });
+          skillObserver.unobserve(e.target);
+        }
+      });
+    },{threshold:0.18});
+    document.querySelectorAll('#skills .reveal, #skills .grid').forEach(n=>skillObserver.observe(n));
+
+    // Contact form: open default mail client with data (safe fallback, no backend)
+    (function(){
+      emailjs.init("EM57zFmHz4o6Gr2lM"); // replace with your EmailJS Public Key
+    })();
+
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      emailjs.sendForm(
+        "service_0r1qzcc",   // ✅ your Service ID
+          // ✅ replace with your Template ID
+        this
+      ).then(() => {
+          document.getElementById("formMsg").textContent = "✅ Message sent successfully!";
+          form.reset();
+        }, (error) => {
+          document.getElementById("formMsg").textContent = "❌ Failed to send: " + JSON.stringify(error);
+        });
+    });
+
+    // Smooth scroll helper
+    function scrollTo(sel){ document.querySelector(sel).scrollIntoView({behavior:'smooth'}); }
+  </script>
+</body>
+</html>
