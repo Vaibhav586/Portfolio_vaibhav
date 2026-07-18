@@ -4,10 +4,10 @@ export const data = {
   titles: ["AI Engineer", "Machine Learning Engineer", "GenAI Developer", "Backend Developer", "Researcher"],
   bio: "I'm an AI & Machine Learning Engineer passionate about building intelligent systems that bridge research and real-world impact. From deepfake detection to electricity forecasting, I craft solutions that matter.",
   email: "vaibhav@example.com",
-  github: "https://github.com/vaibhav",
-  linkedin: "https://linkedin.com/in/vaibhav",
-  twitter: "https://twitter.com/vaibhav",
-  medium: "https://medium.com/@vaibhav",
+  github: "https://github.com/vaibhav586",
+  linkedin: "https://linkedin.com",
+  twitter: "https://twitter.com",
+  medium: "https://medium.com",
   resume: "/resume.pdf",
 
   stats: [
