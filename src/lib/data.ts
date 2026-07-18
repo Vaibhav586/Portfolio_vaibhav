@@ -3,7 +3,7 @@ export const data = {
   tagline: "Building intelligent systems that solve real-world problems.",
   titles: ["AI Engineer", "Machine Learning Engineer", "GenAI Developer", "Backend Developer", "Researcher"],
   bio: "I'm an AI & Machine Learning Engineer passionate about building intelligent systems that bridge research and real-world impact. From deepfake detection to electricity forecasting, I craft solutions that matter.",
-  email: "vaibhav@example.com",
+  email: "vikashvaibhav584@gmail.com",
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",
   medium: "https://medium.com",
