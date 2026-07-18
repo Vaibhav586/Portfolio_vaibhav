@@ -1,6 +1,7 @@
 "use client";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import Image from "next/image";
 import { Mail, Download, ArrowRight, Code2, BookOpen, Briefcase, Trophy, Users, Award } from "lucide-react";
 import { LinkedinIcon } from "@/components/ui/SocialIcons";
 import { data } from "@/lib/data";
@@ -109,15 +110,20 @@ function ProfileCard() {
         {/* Avatar */}
         <div style={{
           width: "100%", height: 220, borderRadius: 18, marginBottom: 18,
-          background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0c1a3a 100%)",
           position: "relative", overflow: "hidden",
-          display: "flex", alignItems: "center", justifyContent: "center",
         }}>
+          <Image
+            src="/vaibhav2.png"
+            alt="Vaibhav"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 300px"
+            style={{ objectFit: "cover", objectPosition: "center 22%" }}
+          />
           <div style={{
             position: "absolute", inset: 0,
-            background: "radial-gradient(circle at 50% 60%, rgba(59,130,246,0.25), transparent 65%)",
+            background: "linear-gradient(180deg, rgba(15,23,42,0.04), rgba(15,23,42,0.25))",
           }} />
-          <span className="gradient-text" style={{ fontSize: "5.5rem", fontWeight: 900, position: "relative", zIndex: 1 }}>V</span>
           {/* Animated ring */}
           <div style={{
             position: "absolute", inset: 12, borderRadius: "50%",
