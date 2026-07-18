@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { data } from "@/lib/data";
 import { ExternalLink, X, ChevronRight } from "lucide-react";
-import { GithubIcon } from "@/components/ui/SocialIcons";
 
 function Modal({ p, onClose }: { p: typeof data.projects[0]; onClose: () => void }) {
   return (
@@ -95,19 +94,8 @@ function Modal({ p, onClose }: { p: typeof data.projects[0]; onClose: () => void
             </div>
           </div>
 
-          {/* Links */}
-          <div style={{ display: "flex", gap: 10 }}>
-            {p.github && (
-              <a href={p.github} target="_blank" rel="noopener noreferrer" className="glass" style={{
-                display: "inline-flex", alignItems: "center", gap: 7,
-                padding: "9px 16px", borderRadius: 12,
-                fontSize: "0.82rem", color: "var(--text2)", textDecoration: "none",
-                fontWeight: 500,
-              }}>
-                <GithubIcon size={14} /> GitHub
-              </a>
-            )}
-            {p.demo && (
+          {p.demo && (
+            <div style={{ display: "flex", gap: 10 }}>
               <a href={p.demo} target="_blank" rel="noopener noreferrer" style={{
                 display: "inline-flex", alignItems: "center", gap: 7,
                 padding: "9px 16px", borderRadius: 12,
@@ -116,8 +104,8 @@ function Modal({ p, onClose }: { p: typeof data.projects[0]; onClose: () => void
               }}>
                 <ExternalLink size={14} /> Live Demo
               </a>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>
@@ -214,14 +202,7 @@ export default function Projects() {
                     }}>{t}</span>
                   ))}
                 </div>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  {p.github && (
-                    <a href={p.github} target="_blank" rel="noopener noreferrer"
-                      onClick={e => e.stopPropagation()}
-                      style={{ display: "flex", alignItems: "center", gap: 5, fontSize: "0.78rem", color: "var(--text3)", textDecoration: "none" }}>
-                      <GithubIcon size={13} /> Code
-                    </a>
-                  )}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
                   <span style={{ fontSize: "0.75rem", color: "var(--text3)", display: "flex", alignItems: "center", gap: 4 }}>
                     Open <ChevronRight size={12} />
                   </span>
