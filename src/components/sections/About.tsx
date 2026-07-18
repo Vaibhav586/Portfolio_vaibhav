@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { data } from "@/lib/data";
 
 function SectionHeader({ label, title, sub }: { label: string; title: React.ReactNode; sub: string }) {
@@ -61,17 +62,19 @@ export default function About() {
                 border: "1px solid rgba(139,92,246,0.15)",
                 animation: "spin-reverse 14s linear infinite",
               }} />
-              {/* Core */}
-              <div
-                className="glass"
+              {/* Profile photo */}
+              <Image
+                src="/vaibhav2.png"
+                alt="Vaibhav"
+                fill
+                sizes="232px"
                 style={{
-                  position: "absolute", inset: 40, borderRadius: "50%",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  boxShadow: "0 0 60px rgba(59,130,246,0.15)",
+                  inset: 24, width: "calc(100% - 48px)", height: "calc(100% - 48px)",
+                  borderRadius: "50%", objectFit: "cover", objectPosition: "center top",
+                  border: "3px solid rgba(255,255,255,0.12)",
+                  boxShadow: "0 0 60px rgba(59,130,246,0.2)",
                 }}
-              >
-                <span className="gradient-text" style={{ fontSize: "4.5rem", fontWeight: 900 }}>V</span>
-              </div>
+              />
               {/* Floating chips */}
               {[
                 { top: "2%",  left: "60%", label: "AI",      color: "#3b82f6", delay: 0 },
