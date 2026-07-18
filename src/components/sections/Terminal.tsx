@@ -4,14 +4,13 @@ import { useState, useRef, useEffect } from "react";
 import { data } from "@/lib/data";
 
 const CMDS: Record<string, string> = {
-  help:         "Commands: about · skills · projects · experience · research · contact · github · resume · whoami · ls · clear · coffee",
+  help:         "Commands: about · skills · projects · experience · research · contact · resume · whoami · ls · clear · coffee",
   about:        data.chatbot.about,
   skills:       data.chatbot.skills,
   projects:     data.chatbot.projects,
   experience:   data.chatbot.experience,
   research:     data.chatbot.research,
   contact:      data.chatbot.contact,
-  github:       `GitHub → ${data.github}`,
   resume:       data.chatbot.resume,
   whoami:       "vaibhav — AI & ML Engineer",
   ls:           "about/   projects/   experience/   research/   skills/   contact/   resume.pdf",

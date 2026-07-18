@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { data } from "@/lib/data";
 import { Mail, ArrowUp } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
+import { LinkedinIcon } from "@/components/ui/SocialIcons";
 
 export default function Footer() {
   const links = ["About", "Experience", "Projects", "Research", "Skills", "Contact"];
@@ -48,7 +48,6 @@ export default function Footer() {
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {[
-                { Icon: GithubIcon,   href: data.github,            label: "GitHub"   },
                 { Icon: LinkedinIcon, href: data.linkedin,          label: "LinkedIn" },
                 { Icon: Mail,         href: `mailto:${data.email}`, label: "Email"    },
               ].map(({ Icon, href, label }) => (

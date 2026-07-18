@@ -2,7 +2,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Mail, Download, ArrowRight, Code2, BookOpen, Briefcase, Trophy, Users, Award } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
+import { LinkedinIcon } from "@/components/ui/SocialIcons";
 import { data } from "@/lib/data";
 import { useRef, useEffect, useState } from "react";
 
@@ -144,15 +144,6 @@ function ProfileCard() {
           Available for opportunities
         </div>
 
-        {/* GitHub badge */}
-        <div style={{
-          marginTop: 14, padding: "8px 12px", borderRadius: 12,
-          background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)",
-          display: "flex", alignItems: "center", gap: 8,
-        }}>
-          <GithubIcon size={14} style={{ color: "var(--text3)" }} />
-          <span style={{ fontSize: "0.72rem", color: "var(--text3)" }}>github.com/vaibhav</span>
-        </div>
       </div>
     </motion.div>
   );
@@ -274,7 +265,6 @@ export default function Hero() {
               style={{ display: "flex", gap: 10 }}
             >
               {[
-                { Icon: GithubIcon,  href: data.github,   label: "GitHub" },
                 { Icon: LinkedinIcon, href: data.linkedin, label: "LinkedIn" },
                 { Icon: Mail,        href: `mailto:${data.email}`, label: "Email" },
               ].map(({ Icon, href, label }) => (
