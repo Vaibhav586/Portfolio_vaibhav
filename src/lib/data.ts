@@ -4,8 +4,8 @@ export const data = {
   titles: ["AI Engineer", "Machine Learning Engineer", "GenAI Developer", "Backend Developer", "Researcher"],
   bio: "I'm an AI & Machine Learning Engineer passionate about building intelligent systems that bridge research and real-world impact. From deepfake detection to electricity forecasting, I craft solutions that matter.",
   email: "vikashvaibhav584@gmail.com",
-  linkedin: "https://linkedin.com",
-  twitter: "https://twitter.com",
+  linkedin: "https://www.linkedin.com/in/vaibhav-rajiv-kumar-53177a333/",
+  twitter: "https://twitter.com/Vaibhav586",
   medium: "https://medium.com",
   resume: "/resume.pdf",
 
@@ -20,16 +20,15 @@ export const data = {
 
   timeline: [
     { year: "2022", event: "Started AI Journey" },
-    { year: "2023", event: "Deepfake Detection Research" },
-    { year: "2023", event: "Electricity Forecasting" },
-    { year: "2024", event: "AI Intern @ ClearTax" },
-    { year: "2024", event: "IEEE Research Publication" },
-    { year: "2024", event: "Operations Intern @ OpenRAG" },
-    { year: "2025", event: "Open to AI Opportunities" },
+    { year: "2024", event: "AI Intern @ OpenRAG" },
+    { year: "2025", event: "Cloud Security Intern @ Zero Trust Cloud"},
+    { year: "2026", event: "Operation Intern @ ClearTax" },
+    { year: "2026", event: "IEEE Research Publication" },
+    { year: "2026", event: "Btech in CSE-AIML @ SRMIST" },
   ],
 
   skills: {
-    Programming: ["Python", "TypeScript", "JavaScript", "C++", "SQL", "Bash"],
+    Programming: ["Python", "TypeScript", "JavaScript", "SQL", "Bash"],
     AI: ["PyTorch", "TensorFlow", "Scikit-learn", "LangChain", "OpenAI API", "HuggingFace", "RAG", "LLMs"],
     Backend: ["FastAPI", "Node.js", "Express", "REST APIs", "GraphQL", "WebSockets"],
     Frontend: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Three.js"],
