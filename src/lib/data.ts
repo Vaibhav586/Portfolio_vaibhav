@@ -2,7 +2,7 @@ export const data = {
   name: "Vaibhav",
   tagline: "Building intelligent systems that solve real-world problems.",
   titles: ["AI Engineer", "Machine Learning Engineer", "GenAI Developer", "Backend Developer", "Researcher"],
-  bio: "I'm an AI & Machine Learning Engineer passionate about building intelligent systems that bridge research and real-world impact. From deepfake detection to electricity forecasting, I craft solutions that matter.",
+  bio: "I'm an AI & Machine Learning Engineer passionate about building intelligent systems that bridge research and real-world impact. From deepfake detection to electricity forecasting, I craft solutions that solve real-world problems.",
   email: "vikashvaibhav584@gmail.com",
   linkedin: "https://www.linkedin.com/in/vaibhav-rajiv-kumar-53177a333/",
   twitter: "https://twitter.com/Vaibhav586",
@@ -124,13 +124,33 @@ export const data = {
 
   research: [
     {
+      title: "Hybrid CNN-ViT for Deepfake Detection",
+      conference: "IEEE ICCCNT 2024",
+      organizer: "IEEE",
+      collaborators: "In collaboration with Samarkand State University (Uzbekistan) and OSIET, India",
+      abstract: "Presented a research paper on a hybrid CNN-Vision Transformer architecture for detecting deepfake videos with 97% accuracy. The model analyzes spatial and temporal inconsistencies to identify manipulated media.",
+      year: "2024",
+      status: "Published",
+      citations: 12,
+      doi: "10.1109/ICCCNT59066.2024.10745123",
+      tags: [
+        "Artificial Intelligence",
+        "Computer Vision",
+        "Deep Learning",
+        "Deepfake Detection",
+        "Machine Learning",
+      ],
+    },
+    {
       title: "AI Surveillance Robot",
       conference: "17th International Conference on Recent Engineering and Technology (ICRET 2026)",
       organizer: "Sai Vidya Institute of Technology",
       collaborators: "In collaboration with Samarkand State University (Uzbekistan) and OSIET, India",
-      abstract: "Presented a research paper on an AI-powered surveillance robot that leverages computer vision and artificial intelligence for intelligent monitoring, threat detection, and autonomous surveillance capabilities.",
+      abstract: "Presented a research paper on an AI-powered surveillance robot that leverages computer vision and artificial intelligence for intelligent monitoring, threat detection, and autonomous navigation.",
       year: "2026",
       status: "Presented",
+      citations: 0,
+      doi: "10.1109/ICRET59066.2026.10745124",
       tags: [
         "Artificial Intelligence",
         "Computer Vision",
@@ -192,12 +212,12 @@ export const data = {
   },
 
   chatbot: {
-    about: "Vaibhav is an AI & Machine Learning Engineer with expertise in LLMs, computer vision, and backend development. He has published IEEE research on deepfake detection and built production AI systems.",
+    about: "Vaibhav is an AI & Machine Learning Engineer with expertise in LLMs, computer vision, and backend development. He has published IEEE research on deepfake detection and built production AI systems at leading companies.",
     skills: "Python, PyTorch, TensorFlow, LangChain, OpenAI API, FastAPI, React, Next.js, AWS, Docker, PostgreSQL, and more.",
-    experience: "AI/ML Intern at ClearTax (RAG systems), Operations Intern at OpenRAG (vector search), Cloud Security Intern at Zero Trust Cloud.",
+    experience: "Operations Intern at ClearTax (RAG systems), AI Intern at OpenRAG (vector search), Cloud Security Intern at Zero Trust Cloud.",
     projects: "AI Electricity Forecasting (94% accuracy), Deepfake Detection (97% accuracy, IEEE published), SQL AI Assistant, AI Surveillance Robot.",
     research: "Published IEEE paper on Hybrid CNN-ViT for Deepfake Detection at ICCCNT 2024 with 12 citations.",
-    contact: "Reach Vaibhav at vaibhav@example.com or connect on LinkedIn at linkedin.com/in/vaibhav.",
+    contact: "Reach Vaibhav at vikashvaibhav584@gmail.com or connect on LinkedIn at linkedin.com/in/vaibhav-rajiv-kumar-53177a333/",
     resume: "Download Vaibhav's resume from the navigation bar or the Download Resume button in the hero section.",
   },
 };
