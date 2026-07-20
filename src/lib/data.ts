@@ -30,7 +30,7 @@ export const data = {
   skills: {
     Programming: ["Python", "TypeScript", "JavaScript", "SQL", "Bash"],
     AI: ["PyTorch", "Scikit-learn", "LangChain", "OpenAI API", "HuggingFace", "RAG", "LLMs"],
-    Backend: ["FastAPI", "Node.js", "REST APIs",],
+    Backend: ["FastAPI", "Node.js", "REST APIs"],
     Frontend: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
     Database: ["MySQL", "MongoDB", "ChromaDB"],
     Cloud: ["AWS", "Vercel", "Docker", "Kubernetes"],
@@ -176,7 +176,7 @@ export const data = {
   ],
 
   certifications: [
-    { name: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate", issuer: "Oracle", date: "2025", logo: "Oracle", credential: "CE92DD53D3E37AF7F829E1A43304E2B83172D5C2A0CC396E76D2B981F94F6C7D" },
+    { name: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate", issuer: "Oracle", date: "2025", logo: "Oracle", credential: "CE92DD53D3E37AF7F829E1A43304E2B83172D5C2A0CC396E76D2B981F94F6C7D"},
     { name: "Introduction to AI", issuer: "Google", date: "2025", logo: "Google", credential: "VRPZU68L6OQF" },
     { name: "SQL Foundations", issuer: "Microsoft", date: "2025", logo: "Microsoft", credential: "BSKIGTP5Q892" },
     { name: "Responsive Web Design", issuer: "freeCodeCamp", date: "2025", logo: "freeCodeCamp", credential: "vaibhav_584-rwd" },
