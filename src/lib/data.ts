@@ -29,11 +29,11 @@ export const data = {
 
   skills: {
     Programming: ["Python", "TypeScript", "JavaScript", "SQL", "Bash"],
-    AI: ["PyTorch", "TensorFlow", "Scikit-learn", "LangChain", "OpenAI API", "HuggingFace", "RAG", "LLMs"],
-    Backend: ["FastAPI", "Node.js", "Express", "REST APIs", "GraphQL", "WebSockets"],
-    Frontend: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Three.js"],
-    Database: ["PostgreSQL", "MongoDB", "Redis", "Pinecone", "ChromaDB"],
-    Cloud: ["AWS", "GCP", "Vercel", "Docker", "Kubernetes"],
+    AI: ["PyTorch", "Scikit-learn", "LangChain", "OpenAI API", "HuggingFace", "RAG", "LLMs"],
+    Backend: ["FastAPI", "Node.js", "REST APIs",],
+    Frontend: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    Database: ["MySQL", "MongoDB", "ChromaDB"],
+    Cloud: ["AWS", "Vercel", "Docker", "Kubernetes"],
     DevOps: ["Git", "GitHub Actions", "CI/CD", "Linux", "Nginx"],
     Tools: ["VS Code", "Jupyter", "Postman", "Figma", "Notion"],
   },
@@ -92,8 +92,8 @@ export const data = {
   experience: [
     {
       company: "ClearTax",
-      role: "AI/ML Intern",
-      duration: "Jun 2024 – Aug 2024",
+      role: "Operation Intern",
+      duration: "April 2026 – July 2026",
       description: "Built RAG-based document intelligence system reducing manual review time by 60%. Developed LLM pipelines for tax document processing.",
       skills: ["Python", "LangChain", "RAG", "OpenAI", "FastAPI"],
       achievements: ["60% reduction in manual review", "Processed 10K+ documents", "Deployed to production"],
@@ -102,7 +102,7 @@ export const data = {
     },
     {
       company: "OpenRAG",
-      role: "Operations & AI Intern",
+      role: "AI Intern",
       duration: "Jan 2024 – Apr 2024",
       description: "Optimized RAG pipelines for enterprise knowledge bases. Implemented vector search with Pinecone and ChromaDB.",
       skills: ["Python", "Pinecone", "ChromaDB", "LangChain", "Docker"],
@@ -123,16 +123,24 @@ export const data = {
   ],
 
   research: [
-    {
-      title: "Hybrid CNN-ViT Architecture for Deepfake Video Detection",
-      conference: "IEEE ICCCNT 2024",
-      abstract: "We propose a novel hybrid architecture combining Convolutional Neural Networks with Vision Transformers for robust deepfake video detection, achieving 97.3% accuracy on FaceForensics++ benchmark.",
-      doi: "10.1109/ICCCNT.2024.xxxxx",
-      citations: 12,
-      year: "2024",
-      tags: ["Deep Learning", "Computer Vision", "Deepfake Detection", "ViT"],
-    },
-  ],
+  {
+    title: "AI Surveillance Robot",
+    conference: "17th International Conference on Recent Engineering and Technology (ICRET 2026)",
+    organizer: "Sai Vidya Institute of Technology",
+    collaborators: "In collaboration with Samarkand State University (Uzbekistan) and OSIET, India",
+    abstract:
+      "Presented a research paper on an AI-powered surveillance robot that leverages computer vision and artificial intelligence for intelligent monitoring, threat detection, and autonomous surveillance in real-world environments.",
+    year: "2026",
+    status: "Presented",
+    tags: [
+      "Artificial Intelligence",
+      "Computer Vision",
+      "Robotics",
+      "Surveillance Systems",
+      "Machine Learning",
+    ],
+  },
+],
 
   leadership: [
     {
@@ -145,11 +153,18 @@ export const data = {
     },
     {
       role: "Discipline Convenor",
-      org: "Technical Fest",
-      duration: "2024",
-      description: "Managed discipline and coordination for 500+ participant technical festival.",
+      org: "National level Fest",
+      duration: "2025",
+      description: "Managed discipline and coordination for 20k+ participant Milan festival.",
       events: 8,
-      students: 500,
+      students: 20k,
+    },
+    {
+      role: "Class Representative",
+      org: "SRMIST",
+      duration: "2022-2026",
+      description: "acting as the primary liaison between faculty and students while coordinating academic communication and class activities.",
+      students: 68,
     },
   ],
 
@@ -161,10 +176,11 @@ export const data = {
   ],
 
   certifications: [
-    { name: "AWS Solutions Architect", issuer: "Amazon Web Services", date: "2024", logo: "AWS", credential: "AWS-SAA-XXXXX" },
-    { name: "Deep Learning Specialization", issuer: "DeepLearning.AI", date: "2023", logo: "DL", credential: "CERT-XXXXX" },
-    { name: "TensorFlow Developer", issuer: "Google", date: "2023", logo: "TF", credential: "TF-XXXXX" },
-    { name: "LangChain for LLMs", issuer: "DeepLearning.AI", date: "2024", logo: "LC", credential: "LC-XXXXX" },
+    { name: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate", issuer: "Oracle", date: "2025", logo: "Oracle", credential: "CE92DD53D3E37AF7F829E1A43304E2B83172D5C2A0CC396E76D2B981F94F6C7D" },
+    { name: "Introduction to AI", issuer: "Google", date: "2025", logo: "Google", credential: "VRPZU68L6OQF" },
+    { name: "SQL Foundations", issuer: "Microsoft", date: "2025", logo: "Microsoft", credential: "BSKIGTP5Q892" },
+    { name: "Responsive Web Design", issuer: "freeCodeCamp", date: "2025", logo: "freeCodeCamp", credential: "vaibhav_584-rwd" },
+    { name: "Google Cloud Computing Foundations", issuer: "Google", date: "2025", logo: "Google", credential: "https://www.credly.com/badges/7afd0590-7f27-49a8-ab8a-5310ceab7e5e/public_url" },
   ],
 
   now: {
