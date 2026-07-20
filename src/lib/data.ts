@@ -123,24 +123,23 @@ export const data = {
   ],
 
   research: [
-  {
-    title: "AI Surveillance Robot",
-    conference: "17th International Conference on Recent Engineering and Technology (ICRET 2026)",
-    organizer: "Sai Vidya Institute of Technology",
-    collaborators: "In collaboration with Samarkand State University (Uzbekistan) and OSIET, India",
-    abstract:
-      "Presented a research paper on an AI-powered surveillance robot that leverages computer vision and artificial intelligence for intelligent monitoring, threat detection, and autonomous surveillance in real-world environments.",
-    year: "2026",
-    status: "Presented",
-    tags: [
-      "Artificial Intelligence",
-      "Computer Vision",
-      "Robotics",
-      "Surveillance Systems",
-      "Machine Learning",
-    ],
-  },
-],
+    {
+      title: "AI Surveillance Robot",
+      conference: "17th International Conference on Recent Engineering and Technology (ICRET 2026)",
+      organizer: "Sai Vidya Institute of Technology",
+      collaborators: "In collaboration with Samarkand State University (Uzbekistan) and OSIET, India",
+      abstract: "Presented a research paper on an AI-powered surveillance robot that leverages computer vision and artificial intelligence for intelligent monitoring, threat detection, and autonomous surveillance capabilities.",
+      year: "2026",
+      status: "Presented",
+      tags: [
+        "Artificial Intelligence",
+        "Computer Vision",
+        "Robotics",
+        "Surveillance Systems",
+        "Machine Learning",
+      ],
+    },
+  ],
 
   leadership: [
     {
@@ -157,7 +156,7 @@ export const data = {
       duration: "2025",
       description: "Managed discipline and coordination for 20k+ participant Milan festival.",
       events: 8,
-      students: 20k,
+      students: 20000,
     },
     {
       role: "Class Representative",
@@ -176,7 +175,7 @@ export const data = {
   ],
 
   certifications: [
-    { name: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate", issuer: "Oracle", date: "2025", logo: "Oracle", credential: "CE92DD53D3E37AF7F829E1A43304E2B83172D5C2A0CC396E76D2B981F94F6C7D"},
+    { name: "Oracle Cloud Infrastructure 2024 Certified AI Foundations Associate", issuer: "Oracle", date: "2025", logo: "Oracle", credential: "CE92DD53D3E37AF7F829E1A43304E2B83172D5C2A0CC396E76D" },
     { name: "Introduction to AI", issuer: "Google", date: "2025", logo: "Google", credential: "VRPZU68L6OQF" },
     { name: "SQL Foundations", issuer: "Microsoft", date: "2025", logo: "Microsoft", credential: "BSKIGTP5Q892" },
     { name: "Responsive Web Design", issuer: "freeCodeCamp", date: "2025", logo: "freeCodeCamp", credential: "vaibhav_584-rwd" },
